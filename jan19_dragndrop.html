@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANYAAAAAAAD</title>
+    <style>
+        #dnd {
+            box-sizing: border-box;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: darkmagenta;
+            border: 4px solid skyblue
+        }
+
+        .active {
+            background-color: darkolivegreen !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dnd"></div>
+    <script>
+        let obj = document.querySelector('#dnd');
+        let isHeld = false;
+        obj.style.top = 0;
+        obj.style.left = 0;
+        obj.addEventListener('mousedown', function (event) {
+            isHeld = true;
+            let coord = [event.offsetX, event.offsetY]
+            obj.addEventListener('mouseup', function () {
+                isHeld = false;
+                obj.classList.remove('active')
+            })
+            document.addEventListener('mousemove', function (mouseEvent) {
+                if (isHeld) {
+                    obj.style.top = mouseEvent.pageY - coord[1] + 'px';
+                    obj.style.left = mouseEvent.pageX - coord[0] + 'px';
+                    obj.classList.add('active')
+                }
+                if (parseInt(obj.style.top) < 0 || parseInt(obj.style.top) > window.visualViewport.height - 150
+                    || parseInt(obj.style.left) < 0 || parseInt(obj.style.left) > window.visualViewport.width - 150) {
+                    isHeld = false;
+                    obj.classList.remove('active')
+                    if (parseInt(obj.style.top) < 0) {
+                        obj.style.top = 0 + 'px';
+                    }
+                    if (parseInt(obj.style.top) > window.visualViewport.height - 150) {
+                        obj.style.top = window.visualViewport.height - 150 + 'px';
+                    }
+                    if (parseInt(obj.style.left) < 0) {
+                        obj.style.left = 0 + 'px';
+                    }
+                    if (parseInt(obj.style.left) > window.visualViewport.width - 150) {
+                        obj.style.left = window.visualViewport.width - 150 + 'px';
+                    }
+                }
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>

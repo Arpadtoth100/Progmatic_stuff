@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./admin.css">
+
+    <title>Admin Interface</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navbar">
+            <a href="#" id="statisticsTab">Statistics</a>
+            <a href="#" id="usersTab">Users</a>
+            <a href="#" id="galleryTab">Gallery</a>
+        </nav>
+        <button type="submit" id="adminLogOut">Log Out</button>
+        <div id="datafield">
+            <div id='neo' class="show"></div>
+            <div id="stats" class="noShow">
+                <p id='usernr'></p>
+                </br>
+                <p id='picdusers'></p></br>
+
+            </div>
+            <div id="userData" class="noShow">
+                <table>
+                    <tr>
+                        <td><label for="nameInput">Full Name</label></td>
+                        <td><label for="userInput">Username</label></td>
+                        <td><label for="emailInput">E-mail</label></td>
+                        <td><label for="picInput">Picture URL</label></td>
+                        <td><label for="saveInput"></label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name" id="nameInput"></td>
+                        <td><input type="text" name="username" id="userInput"></td>
+                        <td><input type="email" name="email" id="emailInput"></td>
+                        <td><input type="text" name="picInput" id="picInput"></td>
+                        <td><button id="saveInput">Save</button></td>
+                    </tr>
+                </table>
+                <table id="dataShow">
+                    <thead>
+                        <tr>
+                            <th id="thId">Id</th>
+                            <th>Full Name</th>
+                            <th>Username</th>
+                            <th>E-mail</th>
+                            <th>Picture</th>
+                            <th>Picture URL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBody">
+
+                    </tbody>
+
+                </table>
+            </div>
+            <div id="gallery" class="noShow">
+                <select name='usersinselect' id='usersinselect'>
+                </select>
+                <button id="savepic">Save me</button>
+                <div id='flex-container'>
+                    <div class="card">
+                        <img src="http://www.placecage.com/200/200">
+                    </div>
+                    <div class="card">
+                        <img src="https://placebear.com/g/200/200">
+                    </div>
+                    <div class="card">
+                        <img src="https://stevensegallery.com/200/200">
+                    </div>
+                    <div class="card">
+                        <img src="http://placebeard.it/200/200">
+                    </div>
+                    <div class="card">
+                        <img src="http://www.placecage.com/g/200/200">
+                    </div>
+                    <div class="card">
+                        <img src="https://placebear.com/200/200">
+                    </div>
+                    <div class="card">
+                        <img src="http://www.placecage.com/c/200/200">
+                    </div>
+                    <div class="card">
+                        <img src="https://stevensegallery.com/g/200/200">
+                    </div>
+                    <div class="card">
+                        <img src="http://www.placecage.com/300/300">
+                    </div>
+                    <div class="card">
+                        <img src="https://stevensegallery.com/400/400">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="database.js"></script>
+    <script src="admin2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        fieldset {
+            width: 500px;
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Alap adatok</legend><br>
+            <label for="surname">Vezeteknev:</label><br>
+            <input type="text" id="surname" , name="sn"><br><br>
+            <label for="givenname">Keresztnev:</label><br>
+            <input type="text" id="givenname" , name="gn"><br><br>
+            <label for="email">E-mail: *</label><br>
+            <input type="email" id="email" name="emil" required="required"><br><br>
+            <label for="phone">Telefonszam:</label><br>
+            <input type="tel" id="phone" name="nr" placeholder="+36 30 123 4567"><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Postai Cim</legend><br>
+            <input type="text" name="ir" placeholder="iranyitoszam">
+
+            <select name="varos">
+                <option value="">varos</option>
+                <option value="Bekescsaba">Bekescsaba</option>
+                <option value="Budapest">Budapest</option>
+                <option value="Debrecen">Debrecen</option>
+                <option value="Szeged">Szeged</option>
+                <option value="Zalaegerszeg">Zalaegerszeg</option>
+            </select>
+            <select name="kerulet" , disabled="disabled">
+                <option value="">kerulet</option>
+                <option value="I">I.</option>
+                <option value="II">II.</option>
+                <option value="III">III.</option>
+                <option value="IV">IV.</option>
+                <option value="V">V.</option>
+            </select> <br><br>
+            <label for="">Cim:</label> <br>
+            <input type="text" id="address" name="cim"><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Kerdoiv</legend> <br>
+            <label>Leginkabb:*</label> <br>
+            <input type="radio" name="radio" value="boltban" required="required">Boltokban vasarolok <br>
+            <input type="radio" name="radio" value="interneten">Interneten vasarolok <br><br>
+            <label>Ha a haztartasaba vesz dolgokat, akkor azokat ... vasarolja:</label> <br>
+            <input type="checkbox" name="haztartasicucc" value="diszkont">Diszkontban <br>
+            <input type="checkbox" name="haztartasicucc" value="haztartasiuzlet">Haztartasi uzletben <br>
+            <input type="checkbox" name="haztartasicucc" value="internet">Interneten <br>
+            <input type="checkbox" name="haztartasicucc" value="szupermarket">Szupermarketben <br>
+            <input type="checkbox" name="haztartasicucc" value="hipermarket">Hipermarketben <br>
+            <input type="checkbox" name="haztartasicucc" value="plaza">Bevasarlokozpontban <br><br>
+            <label for="suggest">Irja le kerem, mit javithatnank:</label><br>
+            <textarea id="suggest" , cols="60" rows="2"></textarea>
+        </fieldset> <br>
+        <button type="reset">Reset</button>
+        <button type="submit">Kuldes</button>
+    </form>
+</body>
+
+</html>

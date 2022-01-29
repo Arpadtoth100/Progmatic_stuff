@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wiki_homework</title>
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .main {
+            box-sizing: border-box;
+            display: flex;
+            height: 100%;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid lightsteelblue;
+            padding: 0.5em;
+            box-sizing: border-box;
+            margin: 1em;
+        }
+
+        article {
+            padding: .5em;
+            box-sizing: border-box;
+        }
+
+        .green {
+            background-color: #f5fffa;
+        }
+
+        .blue {
+            background-color: #f5faff;
+        }
+
+        h2 {
+            margin: 0 auto 1em;
+            padding: 0.5em;
+        }
+
+        .left h2 {
+            border: 1px solid #a3bfb1;
+            background-color: #cef2e0;
+        }
+
+        .right h2 {
+            border: 1px solid #a3b0bf;
+            background-color: #cedff2;
+        }
+
+        figure {
+            min-width: 150px;
+            max-width: 150px;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .floatleft {
+            float: left;
+            margin: 0 1em 1em 0;
+        }
+
+        .floatright {
+            float: right;
+            margin: 0 0 1em 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: darkblue;
+        }
+
+        .push li {
+            list-style: none;
+            display: inline;
+        }
+
+        .push li::after {
+            content: '-'
+        }
+
+        .push li:first-child::after,
+        .push li:last-child::after {
+            content: ''
+        }
+
+        .push {
+            text-align: end;
+        }
+
+        @media screen and (min-width:680px) {
+            main {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            section {
+                width: calc(50% - 2em);
+                margin: 1em .5em 1em 1em;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="green">
+            <article>
+                <header class="header left">
+                    <h2>From today's featured article</h2>
+                </header>
+                <figure class="floatleft"><img src="https://stevensegallery.com/150/200" alt="epicness">Steven Segal
+                    Sensei</figure>
+                <div>
+                    The Transcaucasian Democratic Federative Republic (TDFR) was a short-lived state in the Caucasus
+                    that included most of the territory of present-day Armenia, Azerbaijan and Georgia, and parts of
+                    Russia and Turkey. The region was part of the Russian Empire, but as this dissolved in 1917 with the
+                    February and October Revolutions the Transcaucasian Commissariat took over in Transcaucasia. In
+                    March 1918, as the First World War continued, the Commissariat initiated unsuccessful peace talks
+                    with the Ottoman Empire, which had invaded the region. Russia withdrew from the war later that
+                    month, conceding parts of the Transcaucasus to the Ottomans. Faced with an Ottoman offensive, on 22
+                    April 1918 the Commissariat dissolved itself and established the TDFR. The Ottoman Empire
+                    immediately recognized the TDFR, which directed its legislature, the Seim, to hold peace talks.
+                    These broke down and, fearing fresh Ottoman attacks, Georgian delegates in the Seim declared
+                    independence on 26 May. Armenia and Azerbaijan each declared themselves independent on 28 May,
+                    ending the federation.
+                    <div>
+                        <ul class="push">
+                            <li>Recently featured:</li>
+                            <li><a href="">Interstate 82</a></li>
+                            <li><a href="">Cimoliopetrus</a></li>
+                            <li><a href="">Operation Grapple</a></li>
+                            </table>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <header class="header left">
+                    <h2>Did you know ...</h2>
+                </header>
+                <figure class="floatright"><img src="https://stevensegallery.com/150/200" alt="epicness">Steven Segal
+                    Sensei</figure>
+                <div>
+                    <ul>
+                        <li>
+                            that <a href="#">Anne Saxelby</a> (pictured) was a pioneer in promoting American artisanal
+                            cheese?
+                        </li>
+                        <li>
+                            that even though <a href="#">Australian citizens</a> are no longer British subjects, they
+                            can still vote in
+                            elections and stand for parliament in the United Kingdom?
+                        </li>
+                        <li>
+                            that Samsi <a href="#">Sastrawidagda</a>, Indonesia's first finance minister, once leased
+                            the veranda of future
+                            president Sukarno's house for his accountant's office?
+                        </li>
+                        <li>
+                            that the <a href="#">RADCAL</a> satellite, designed to have a three-year lifespan, operated
+                            for almost twenty?
+                        </li>
+                        <li>
+                            that the philosopher <a href="#">Emil Utitz</a>, a classmate of Franz Kafka, became the head
+                            librarian of
+                            Theresienstadt Ghetto?
+                        </li>
+                        <li>
+                            that none of the six then-living CCNY players were interviewed for the 1998 documentary film
+                            City
+                            Dump: The Story of the 1951 CCNY Basketball Scandal?
+                        </li>
+                        <li>
+                            that New Zealand association football coach Olli Harder has worked in the US, China, Norway
+                            and
+                            England?
+                        </li>
+                        <li>
+                            that Miller's Anatomy of the Dog, a textbook dedicated to canines, was found by a specialist
+                            feline
+                            publication to be bereft of information about cats?
+                        </li>
+                    </ul>
+
+                </div>
+            </article>
+        </section>
+        <section class="blue">
+            <article>
+                <header class="header right">
+                    <h2>In the news</h2>
+                </header>
+                <figure class="floatright"><img src="https://stevensegallery.com/150/200" alt="epicness">Steven Segal
+                    Sensei</figure>
+                <div>
+                    <ul>
+                        <li>Former South African president F. W. de Klerk (pictured), who negotiated the end of
+                            apartheid with
+                            Nelson Mandela, dies at the age of 85.</li>
+                        <li>SpaceX launches four astronauts on the Crew-3 mission to the International Space Station.
+                        </li>
+                        <li>In stock car racing, Kyle Larson wins the NASCAR Cup Series championship.</li>
+                        <li>Kenyans Albert Korir and Peres Jepchirchir win the New York City Marathon men's and women's
+                            races.</li>
+                    </ul>
+                    <strong>Recent deaths:</strong> <a href="#">Aga Mikolaj</a>
+                    <a href="#">Hugh Leatherman</a>
+                    <a href="#">Ron Flowers Winter</a>
+                    <a href="#">Lee Maracle</a>
+                    <a href="#">Mahlagha Mallah</a>
+                </div>
+            </article>
+            <article>
+                <header class="header right">
+                    <h2>On this day</h2>
+                </header>
+                <p><strong>November 13: Feast day of Saint John Chrysostom (Eastern Christianity)</strong></p>
+                <figure class="floatright"><img src="https://stevensegallery.com/150/200" alt="epicness">Steven Segal
+                    Sensei</figure>
+                <div>
+                    <ul>
+
+                        <li>
+                            1642 – First English Civil War: Royalist forces engaged the much larger Parliamentarian army
+                            at the
+                            Battle of Turnham Green near Turnham Green, Middlesex.
+                        </li>
+                        <li>
+                            1841 – Scottish surgeon James Braid (pictured) observed a demonstration of animal magnetism,
+                            which
+                            inspired him to study the subject he eventually called hypnotism.
+                        </li>
+                        <li>
+                            1927 – The Holland Tunnel, connecting Manhattan with Jersey City under the Hudson River,
+                            opened.
+                        </li>
+                        <li>
+                            1966 – The Israeli military conducted a large cross-border assault on the
+                            Jordanian-controlled West
+                            Bank village of Samu in response to a Fatah land mine incident.
+                        </li>
+                        <li>
+                            2015 – Coordinated terrorist attacks in Paris perpetrated by the Islamic State killed 130
+                            people and
+                            injured 413 others.
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>
