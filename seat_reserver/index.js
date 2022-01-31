@@ -3,6 +3,8 @@ window.addEventListener('load', function () {
 })
 
 function initLoad() {
+    const welcome = document.querySelector('#welcome');
+    const dataField = document.querySelector('#dataField');
     const loginForm = document.querySelector('#loginForm');
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -11,11 +13,12 @@ function initLoad() {
         if (isValid) {
             displayUserData();
             displaySeats()
+            welcome.style.display = "none";
+            dataField.style.display = "flex";
         }
     }
     )
 }
-
 
 function displayUserData() {
     const nameInput = document.querySelector("#loginForm #name");
@@ -68,22 +71,25 @@ function displaySeats() {
     let chairItems = document.querySelectorAll('.chairItem');
     for (let i = 0; i < chairItems.length; i++) {
         chairItems[i].addEventListener('click', function (event) {
-            changer(event.target)
+            changer(event.target);
+            btnDis(reserveBtn, chairItems)
         })
     };
     let seatCounter = document.querySelector('#seatCounter');
     let reserveBtn = document.querySelector('#reserveBtn');
+    reserveBtn.disabled = true;
     reserveBtn.addEventListener('click', function () {
         seatCounter.innerHTML = ""
         for (elem of chairItems) {
             if (elem.className === 'chairItem selected') {
                 seatCounter.innerHTML += `
-                Row: ${elem.id[0]}, Seat: ${elem.id[2]} |
+                Row: ${[...elem.id.split(',')][0]}, Seat: ${[...elem.id.split(',')][1]} |
                 `
                 elem.className = 'chairItem taken';
             }
         };
     })
+    btnDis(reserveBtn, chairItems)
 }
 
 function changer(target) {
@@ -100,4 +106,12 @@ function changer(target) {
             window.alert("Selected seat is not available");
             break;
     };
+}
+
+function btnDis(target, database) {
+    for (elem of database) {
+        if (elem.className === 'chairItem selected') {
+            target.disabled = false;
+        }
+    }
 }

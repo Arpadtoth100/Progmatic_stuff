@@ -43,7 +43,7 @@ body {
 }
 
 #welcome {
-    display: none;
+    display: flex;
     height: 100%;
     font-size: 2em;
     font-weight: bold;
@@ -52,7 +52,7 @@ body {
 }
 
 #dataField {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
