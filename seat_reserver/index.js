@@ -45,7 +45,7 @@ function displaySeats() {
         [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
     ];
     const seatsDisplay = document.querySelector('#seatLocator')
-    for (let row = 0; row < audience.length; row++) {
+    for (let row = audience.length - 1; row >= 0; row--) {
         for (let chair = 0; chair < audience[row].length; chair++) {
             let counter = [row + 1, chair + 1];
             switch (audience[row][chair]) {
@@ -72,24 +72,24 @@ function displaySeats() {
     for (let i = 0; i < chairItems.length; i++) {
         chairItems[i].addEventListener('click', function (event) {
             changer(event.target);
-            btnDis(reserveBtn, chairItems)
+            btnEnable(reserveBtn, chairItems)
         })
     };
     let seatCounter = document.querySelector('#seatCounter');
     let reserveBtn = document.querySelector('#reserveBtn');
     reserveBtn.disabled = true;
     reserveBtn.addEventListener('click', function () {
+        reserveBtn.disabled = true;
         seatCounter.innerHTML = ""
         for (elem of chairItems) {
             if (elem.className === 'chairItem selected') {
                 seatCounter.innerHTML += `
-                Row: ${[...elem.id.split(',')][0]}, Seat: ${[...elem.id.split(',')][1]} |
+                Row: ${elem.id.split(',')[0]}, Seat: ${elem.id.split(',')[1]} |
                 `
                 elem.className = 'chairItem taken';
             }
         };
     })
-    btnDis(reserveBtn, chairItems)
 }
 
 function changer(target) {
@@ -108,10 +108,12 @@ function changer(target) {
     };
 }
 
-function btnDis(target, database) {
+function btnEnable(target, database) {
+    let anyBtn = false
     for (elem of database) {
         if (elem.className === 'chairItem selected') {
-            target.disabled = false;
+            anyBtn = true
         }
     }
+    target.disabled = !anyBtn;
 }
