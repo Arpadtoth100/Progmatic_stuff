@@ -29,7 +29,7 @@ body {
 #loginForm {
     display: flex;
     flex-direction: column;
-    padding: 40px 5px;
+    padding: 40px;
 }
 
 #loginForm input {
@@ -57,10 +57,17 @@ body {
 }
 
 #seatLocator {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
     width: auto;
     height: 500px;
     background-color: gainsboro;
     margin: 50px;
+    padding: 50px 100px;
+    align-items: center;
+    justify-content: center;
+
 }
 
 #reserveBtn {
@@ -73,4 +80,28 @@ body {
 #seatsRes {
     margin-top: 30px;
     margin-left: 50px;
+}
+
+.chairItem {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    margin: 5px 20px;
+}
+
+.title {
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+.free {
+    background-color: lightgreen;
+}
+
+.taken {
+    background-color: lightgrey;
+}
+
+.selected {
+    background-color: lightpink;
 }
