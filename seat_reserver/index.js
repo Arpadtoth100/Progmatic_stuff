@@ -90,7 +90,7 @@ function displaySeats() {
             }
         };
     })
-}
+};
 
 function changer(target) {
     switch (target.className) {
