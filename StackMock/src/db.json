@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "Miert jo a Promise?",
+      "question": "Blablablaaaa"
+    },
+    {
+      "title": "What is this?",
+      "question": "a message box?",
+      "id": 2
+    },
+    {
+      "title": "what the heck",
+      "question": "is this box even should be here?",
+      "id": 3
+    },
+    {
+      "title": "a szex vajon mi",
+      "question": "az elet megalaz",
+      "id": 4
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "question_id": 1,
+      "answer": "Csak.. 1"
+    },
+    {
+      "id": 2,
+      "question_id": 1,
+      "answer": "Mert de es pont 1"
+    },
+    {
+      "id": 3,
+      "question_id": 2,
+      "answer": "Csak.. 2"
+    },
+    {
+      "id": 4,
+      "question_id": 2,
+      "answer": "Mert de es pont 2"
+    },
+    {
+      "id": 5,
+      "question_id": 3,
+      "answer": "Csak.. 3"
+    },
+    {
+      "id": 6,
+      "question_id": 3,
+      "answer": "Mert de es pont 3"
+    }
+  ]
+}

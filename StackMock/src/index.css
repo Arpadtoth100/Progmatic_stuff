@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(201, 201, 201);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px, auto;
+    font-size: 1.5rem;
+}
+
+#leftSide {
+    width: 45%;
+    height: 90%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#newQuestionBtn {
+    margin-left: 40px
+}
+
+button {
+    width: 200px;
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    font-size: 1rem
+}
+
+#questionList {
+    width: 90%;
+    height: 75%;
+    border: 1px dashed black;
+    margin: 40px auto;
+    overflow: auto;
+}
+
+#rightSide {
+    width: 45%;
+    height: 90%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.active {
+    display: flex !important
+}
+
+.inactive {
+    display: none !important
+}
+
+
+#newAnswer {
+    width: 95%;
+    height: 8rem;
+}
+
+#questionDetailed {
+    margin: 40px;
+    height: 90%;
+    border: 1px dotted darkgrey;
+    display: flex;
+    flex-direction: column;
+
+}
+
+textarea {
+    font-size: 1.5rem;
+    margin: 40px auto;
+    width: 90%;
+}
+
+#questionForm {
+    margin-left: 40px;
+}
+
+.questionItem {
+    background-color: aquamarine;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+#answerList {
+    overflow: auto;
+}
